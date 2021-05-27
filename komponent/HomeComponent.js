@@ -1,11 +1,31 @@
-import React, {useState} from 'react';
-import {View, Text} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {View, Text, ScrollView} from 'react-native';
 import HeaderComponent from './HeaderComponent';
 import NotifikasiComponent from './NotifikasiComponent';
+import axios from 'axios'
 
 
 const HomeComponent = () => {
   const [loading, setLoading] = useState(false)
+  const [data, setData] = useState([])
+
+  const getData = async () => {
+    axios({
+      method: 'get',
+      url: `http://192.168.60.113:8000/api/notif`,
+      headers : {
+        Accept : 'aplication/json'
+      }
+    }).then(res => {
+      setData(res.data.data)
+    }).catch(err => {
+      console.log(err)
+    })
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
 
   return (
     <View style={{flex: 1, backgroundColor : '#F3F6FF'}}>
@@ -14,10 +34,10 @@ const HomeComponent = () => {
         <View style={{backgroundColor : '#fff', flex : 1, justifyContent : 'center', alignItems : 'center'}}>
             <Text>Loading...</Text>
         </View> :
-        <View>
+        <ScrollView>
          <HeaderComponent/>
-         <NotifikasiComponent/>
-        </View>
+         <NotifikasiComponent data={data}/>
+        </ScrollView>
       }
     </View>
   );
