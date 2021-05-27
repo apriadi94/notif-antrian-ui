@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "527498521746",
+    "project_id": "pn-kefa",
+    "storage_bucket": "pn-kefa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527498521746:android:d5df21ff95c1439174ca4b",
+        "android_client_info": {
+          "package_name": "com.antrian"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527498521746-6qt69qq0okuv505532nfdtv0j7jm6djo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKIQQ67Oedg53VgUXuuAM81miKIT4nZ-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527498521746-6qt69qq0okuv505532nfdtv0j7jm6djo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
