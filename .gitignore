@@ -4,6 +4,7 @@
 
 # Xcode
 #
+tochscreen/
 build/
 *.pbxuser
 !default.pbxuser
