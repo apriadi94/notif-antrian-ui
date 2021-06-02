@@ -12,7 +12,7 @@ const NotifikasiComponent = ({data}) => {
                     <View style={{backgroundColor : '#fff', borderRadius : 10}}>
                         <View style={{marginHorizontal : 20, marginTop : 10}}>
                             <Text style={{fontWeight : 'bold', color : 'green'}}>{moment(list.tanggal).format('DD/MM/YYYY')}</Text>
-                            <Text style={{fontSize : 15, marginBottom : 10}}>Nomor Antrian {list.nomor} Telah diambil oleh jenis perkara {list.mejaNama}</Text>
+                            <Text style={{fontSize : 15, marginBottom : 10}}>Nomor Perkara {list.nomor_perkara} Telah diambil oleh {list.pihak}</Text>
                         </View>
                     </View>
                 </View>

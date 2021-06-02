@@ -10,7 +10,7 @@ const HeaderComponent = () => {
                     <View style={{marginTop : 5, marginLeft : 15}}>
                         <Text style={{color : 'grey'}}>E-ARIS</Text>
                         <View>
-                            <Text style={{color : 'grey', fontWeight : 'bold'}}>Elektronik Antrian informasi dan Persidangan</Text>
+                            <Text style={{color : 'grey', fontWeight : 'bold'}}>Elektronik Antrian informasi Sidang</Text>
                         </View>
                     </View>
                 </View>
