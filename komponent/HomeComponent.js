@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {View, Text, ScrollView} from 'react-native';
 import HeaderComponent from './HeaderComponent';
 import NotifikasiComponent from './NotifikasiComponent';
+import OneSignal from 'react-native-onesignal';
 import axios from 'axios'
 
 
@@ -12,7 +13,7 @@ const HomeComponent = () => {
   const getData = async () => {
     axios({
       method: 'get',
-      url: `http://192.168.60.113:8000/api/notif`,
+      url: `http://36.92.93.61:3789/api/notif`,
       headers : {
         Accept : 'aplication/json'
       }
@@ -25,6 +26,7 @@ const HomeComponent = () => {
 
   useEffect(() => {
     getData()
+    OneSignal.addEventListener('received', getData);
   }, [])
 
   return (
